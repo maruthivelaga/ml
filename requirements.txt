@@ -1,5 +1,5 @@
+tensorflow
+numpy
 fastapi
 uvicorn
-tflite-runtime
-numpy
 pydantic
