@@ -84,4 +84,5 @@ async def get_gradcam(filename: str):
     return JSONResponse(status_code=404, content={"message": "File not found."})
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    port = int(os.environ.get("PORT", 8000))  # Render provides PORT
+    uvicorn.run(app, host="0.0.0.0", port=port)
